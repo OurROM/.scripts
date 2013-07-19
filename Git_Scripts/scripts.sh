@@ -81,10 +81,10 @@ case $choice in
      ;;
      6)
      clear
-     git fetch
+     git merge origin/master
      wait
      echo ""
-     echo "Local Directory Updated with Online Data"
+     echo "Local Directory is Merged with Online Data"
      echo "" 
      read -p "Press [Enter] key to continue..."
      ;;
