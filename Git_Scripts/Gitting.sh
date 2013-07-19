@@ -16,18 +16,18 @@ while true; do
 clear
                                # * Change if Required
 echo "Choose Which Directory You Are Gitting"
-echo "1.  Enter Commit Message"
-echo "2.  Add All Changes"
-echo "3.  Commit All Changes"
-echo "4.  Push All Changes"
-echo "5.  Reset All Changes"
-echo "6.  Merge Current Directory"
-echo "7.  Verify Commit Message"
-echo "8.  "
+echo "1.  Build"
+echo "2.  frameworks_base"
+echo "3.  packages_apps_Mms"
+echo "4.  packages_apps_ROMControl"
+echo "5.  platform_manifest"
+echo "6.  .scripts"
+echo "7.  vendor_aokp"
+echo "8.  Custom [WIP]"
 echo "9.  "
 echo "10. "
 echo ""
-echo "Current Commit Message: $commit"
+echo "Current Drectory recorded: ~/$root/$sub1/$sub2/$sub3"
 echo ""
 echo -n "Enter your choice, or 0 for exit: "
 read choice
@@ -36,70 +36,58 @@ echo
 case $choice in
      1)
      clear
-     echo "Please Enter Your Commit Message:"
-     read commit
      echo ""
-     echo "Commit: '$commit' - has been recorded"
+     echo "Please make another selection"
      echo ""
-     read -p "Press [Enter] key to continue..."
      ;;
      2)
      clear
-     git add --all && git add . && git add -u
-     wait
      echo ""
-     echo "Changes have been added"
-     read -p "Press [Enter] key to continue..."
+     echo "Please make another selection"
+     echo ""
      ;;
      3)
      clear
-     echo "Executing Commit..."
-     git commit -m "$commit"
-     wait
      echo ""
-     echo "Message Commited"
+     echo "Please make another selection"
      echo ""
-     read -p "Press [Enter] key to continue..."
      ;;
      4)
      clear
-                                    # * Change if Required
-     git push git@github.com:OurROM/frameworks_base.git HEAD:jb-mr1
-     wait
      echo ""
-     echo "$commit - has been pushed to OurROM"
-     read -p "Press [Enter] key to continue..."
+     echo "Please make another selection"
+     echo ""
      ;;
      5)
      clear
-     git reset --hard HEAD && git clean -f && git checkout origin/jb-mr1
-     wait
      echo ""
-     echo "Frameworks_Base has been RESET"
+     echo "Please make another selection"
      echo ""
-     read -p "Press [Enter] key to continue..."
      ;;
      6)
      clear
-     git fetch
-     wait
      echo ""
-     echo "Local Directory Updated with Online Data"
-     echo "" 
-     read -p "Press [Enter] key to continue..."
+     echo "Please make another selection"
+     echo ""
      ;;
      7)
      clear
      echo ""
-     echo "Your Current Commit Message: $commit"
+     echo "Please make another selection"
      echo ""
-     read -p "Press [Enter] key to continue..."
      ;;
      8)
      clear
      echo ""
-     echo "Please make another selection"
-     echo ""  
+     echo "Enter Your Working Driectory Root (Case Sensitive)"
+     read root
+     echo ""
+     echo "Enter the 1st level Subdirectory (Case Sensitive)"
+     read sub1
+     echo ""
+     echo "Enter the 2nd Level Subdirectory to ~/$root/$sub1/ (hit [Enter] for none)"
+     read sub2
+     echo "
      ;;
      9)
      clear

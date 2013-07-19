@@ -3,14 +3,11 @@
 # This script can be modified to allow for any directory
 # Be sure to change all Directory References. References will be proceded in the line above by a *
 
-
 clear
 
        # * Change if Required
 cd ~/OurROM/.scripts
 wait
-
-
 
 while true; do
 clear
@@ -87,6 +84,7 @@ case $choice in
      ;;
      6)
      clear
+      
      git merge origin/jb-mr1
      wait
      echo ""
@@ -112,7 +110,7 @@ case $choice in
      clear
      echo ""
      echo "Please make another selection"
-     echo ""   
+     git pull ourrom jb-mr1   
      ;;
      9)
      clear
