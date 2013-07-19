@@ -22,8 +22,8 @@ echo "3.  Commit All Changes"
 echo "4.  Push All Changes"
 echo "5.  Reset All Changes"
 echo "6.  Merge Current Directory"
-echo "7.  Verify Commit Message"
-echo "8.  Revert a Commit"
+echo "7.  REVERT a Commit"
+echo "8.  "
 echo "9.  "
 echo "10. "
 echo ""
@@ -45,6 +45,10 @@ case $choice in
      ;;
      2)
      clear
+     echo "Deleting all Hidden files"
+     find ~/OurROM/ -iname "*.*~" -type f -exec rm {} \;
+     wait
+     echo "All HIDDEN files Deleted"
      git add --all && git add . && git add -u
      wait
      echo ""
@@ -91,13 +95,6 @@ case $choice in
      7)
      clear
      echo ""
-     echo "Your Current Commit Message: $commit"
-     echo ""
-     read -p "Press [Enter] key to continue..."
-     ;;
-     8)
-     clear
-     echo ""
      echo "Paste the Commit Number you would like to Revert:"
      read revert 
      echo "Commit #: '$revert' - will be reverted. Is this Correct?"
@@ -108,6 +105,12 @@ case $choice in
             esac
          done
      echo ""
+     ;;
+     8)
+     clear
+     echo ""
+     echo "Please make another selection"
+     echo ""   
      ;;
      9)
      clear

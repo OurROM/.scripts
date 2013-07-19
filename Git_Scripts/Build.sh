@@ -7,7 +7,7 @@
 clear
 
        # * Change if Required
-cd ~/OurROM/vendor/aokp
+cd ~/OurROM/.scripts
 wait
 
 
@@ -15,7 +15,7 @@ wait
 while true; do
 clear
                                # * Change if Required
-echo "What would you like to do with vendor_aokp?"
+echo "What would you like to do with .scripts?"
 echo "1.  Enter Commit Message"
 echo "2.  Add All Changes"
 echo "3.  Commit All Changes"
@@ -68,7 +68,7 @@ case $choice in
      4)
      clear
                                     # * Change if Required
-     git push git@github.com:OurROM/vendor_aokp.git HEAD:jb-mr1
+     git push git@github.com:OurROM/.scripts.git HEAD:jb-mr1
      wait
      echo ""
      echo "$commit - has been pushed to OurROM"
@@ -79,7 +79,7 @@ case $choice in
      git reset --hard HEAD && git clean -f && git checkout origin/jb-mr1
      wait
      echo ""
-     echo "vendor_aokp has been RESET"
+     echo ".scripts has been RESET"
      echo ""
      read -p "Press [Enter] key to continue..."
      ;;
