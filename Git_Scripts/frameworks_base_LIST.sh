@@ -67,11 +67,14 @@ case $choice in
      ;;
      4)
      clear
+     echo "Pushing your Commit..."
+
                                     # * Change if Required
      git push git@github.com:OurROM/frameworks_base.git HEAD:jb-mr1
      wait
      echo ""
      echo "$commit - has been pushed to OurROM"
+     echo ""
      read -p "Press [Enter] key to continue..."
      ;;
      5)
