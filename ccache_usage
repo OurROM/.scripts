@@ -1,0 +1,15 @@
+#export USE_CCACHE=1 && export CCACHE_DIR=/home/thebytesmasher/.ccache && prebuilts/misc/linux-x86/ccache/ccache -M 20G
+#wait
+#export CCACHE_DIR=/home/thebytesmasher/.ccache
+#wait
+#prebuilts/misc/linux-x86/ccache/ccache -M 20G
+
+
+
+#export USE_CCACHE=1
+#wait
+#export CCACHE_DIR=/home/thebytesmasher/.ccache
+#wait
+#prebuilts/misc/linux-x86/ccache/ccache -M 20G
+#wait
+
