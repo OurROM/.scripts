@@ -79,7 +79,7 @@ case $choice in
      ;;
      5)
      clear
-     git reset --hard HEAD && git clean -f && git checkout origin/jb-mr1
+     git reset --hard HEAD && git clean -f && git checkout FETCH_HEAD
      wait
      echo ""
      echo "Frameworks_Base has been RESET"

@@ -79,15 +79,23 @@ case $choice in
      8)
      clear
      echo ""
-     echo "Enter Your Working Driectory Root (Case Sensitive)"
+     #Create Array
+     echo "Please enter your Working Directory ROOT (Just the word: For ~/OurROM/ type: OurROM)"
      read root
-     echo ""
-     echo "Enter the 1st level Subdirectory (Case Sensitive)"
-     read sub1
-     echo ""
-     echo "Enter the 2nd Level Subdirectory to ~/$root/$sub1/ (hit [Enter] for none)"
-     read sub2
-     echo "
+     echo "Please Enter the Subequent Directories to the location of your git directory"
+     # -a makes read command to read into an array
+     read -a gitdir
+     # get number of elements in the array
+     elements=${#gitdir[@]}
+     fullPath="/${root}/"
+     index=1
+
+while [ "$index" -lt "$elements" ] ; do
+         # append values from $gitdir until you are done
+    fullPath="${fullPath}/${gitdir[$index]}"
+    (( index++ ))
+done 
+
      ;;
      9)
      clear
