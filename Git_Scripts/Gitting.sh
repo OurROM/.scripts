@@ -16,18 +16,18 @@ while true; do
 clear
                                # * Change if Required
 echo "Choose Which Directory You Are Gitting"
-echo "1.  Build"
-echo "2.  frameworks_base"
-echo "3.  packages_apps_Mms"
-echo "4.  packages_apps_ROMControl"
-echo "5.  platform_manifest"
-echo "6.  .scripts"
-echo "7.  vendor_aokp"
+echo "1.  "
+echo "2.  "
+echo "3.  "
+echo "4.  "
+echo "5.  "
+echo "6.  "
+echo "7.  "
 echo "8.  Custom [WIP]"
 echo "9.  "
 echo "10. "
 echo ""
-echo "Current Drectory recorded: ~/$root/$sub1/$sub2/$sub3"
+echo "Current Drectory recorded: ~${fullPath}"
 echo ""
 echo -n "Enter your choice, or 0 for exit: "
 read choice
@@ -83,19 +83,19 @@ case $choice in
      echo "Please enter your Working Directory ROOT (Just the word: For ~/OurROM/ type: OurROM)"
      read root
      echo "Please Enter the Subequent Directories to the location of your git directory"
+     echo "Again, just the words: For ~/OurROM/frameworks/base type: frameworks base"
      # -a makes read command to read into an array
      read -a gitdir
      # get number of elements in the array
      elements=${#gitdir[@]}
-     fullPath="/${root}/"
-     index=1
+     fullPath="/${root}"
+     index=0
 
 while [ "$index" -lt "$elements" ] ; do
          # append values from $gitdir until you are done
     fullPath="${fullPath}/${gitdir[$index]}"
     (( index++ ))
 done 
-
      ;;
      9)
      clear

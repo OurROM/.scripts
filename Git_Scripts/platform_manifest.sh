@@ -23,7 +23,7 @@ echo "4.  Push All Changes"
 echo "5.  Reset All Changes"
 echo "6.  Merge Current Directory"
 echo "7.  REVERT a Commit"
-echo "8.  "
+echo "8.  Git Pull"
 echo "9.  "
 echo "10. "
 echo ""
@@ -111,8 +111,8 @@ case $choice in
      8)
      clear
      echo ""
-     echo "Please make another selection"
-     echo ""   
+     echo "Git Pull"
+     git pull ourrom jb-mr1   
      ;;
      9)
      clear

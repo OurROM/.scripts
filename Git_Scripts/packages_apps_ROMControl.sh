@@ -23,7 +23,7 @@ echo "4.  Push All Changes"
 echo "5.  Reset All Changes"
 echo "6.  Merge Current Directory"
 echo "7.  REVERT a Commit"
-echo "8.  "
+echo "8.  Git Pull"
 echo "9.  "
 echo "10. "
 echo ""
@@ -45,6 +45,10 @@ case $choice in
      ;;
      2)
      clear
+     echo "Deleting all Hidden files"
+     find ~/OurROM/ -iname "*.*~" -type f -exec rm {} \;
+     wait
+     echo "All HIDDEN files Deleted"
      git add --all && git add . && git add -u
      wait
      echo ""
@@ -104,11 +108,11 @@ case $choice in
          done
      echo ""
      ;;
-     8)
+    8)
      clear
      echo ""
-     echo "Please make another selection"
-     echo ""   
+     echo "Git Pull"
+     git pull ourrom jb-mr1   
      ;;
      9)
      clear

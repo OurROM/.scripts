@@ -7,7 +7,7 @@
 clear
 
        # * Change if Required
-cd ~/OurROM/.scripts
+cd ~/OurROM/Gapps
 wait
 
 
@@ -15,7 +15,7 @@ wait
 while true; do
 clear
                                # * Change if Required
-echo "What would you like to do with .scripts?"
+echo "What would you like to do with Gapps?"
 echo "1.  Enter Commit Message"
 echo "2.  Add All Changes"
 echo "3.  Commit All Changes"
@@ -69,10 +69,10 @@ case $choice in
      clear
      echo "Pushing your Commit..."
                                     # * Change if Required
-     git push git@github.com:OurROM/.scripts.git HEAD:master
+     git push git@github.com:TheByteSmasher/Gapps.git HEAD:master
      wait
      echo ""
-     echo "$commit - has been pushed to OurROM"
+     echo "$commit - has been pushed to TheByteSmasher"
      echo ""
      read -p "Press [Enter] key to continue..."
      ;;
@@ -81,7 +81,7 @@ case $choice in
      git reset --hard HEAD && git clean -f && git checkout origin/master
      wait
      echo ""
-     echo ".scripts has been RESET"
+     echo "Gapps has been RESET"
      echo ""
      read -p "Press [Enter] key to continue..."
      ;;
@@ -112,7 +112,7 @@ case $choice in
      clear
      echo ""
      echo "Git Pull"
-     git pull OurROM master   
+     git pull TheByteSmasher master   
      ;;
      9)
      clear
