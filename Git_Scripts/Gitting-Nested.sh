@@ -85,6 +85,8 @@ case $choice in
      #Create Array
      echo "Please enter your Working Directory ROOT (Just the word: For ~/OurROM/ type: OurROM)"
      read root
+     echo "Please enter your remote github.com repository ROOT (Just the word: For https://github.com/OurROM/ type: OurROM)"
+     read repo     
      echo "Please Enter the Subequent Directories to the location of your git directory"
      echo "Again, just the words: For ~/OurROM/frameworks/base type: frameworks base"
      # -a makes read command to read into an array
@@ -92,36 +94,45 @@ case $choice in
      # get number of elements in the array
      elements=${#gitdir[@]}
      fullPath="~/${root}"
+     repoSave="${repo}/"     
      index=0
 
 while [ "$index" -lt "$elements" ] ; do
          # append values from $gitdir until you are done
     fullPath="${fullPath}/${gitdir[$index]}"
     (( index++ ))
+
+    index=0
+    while [ "$index" -lt "$elements" ] ; do
+        repoSave="${repoSave}${gitdir[$index]}_"
+        (( index++ ))
+        repoPath=${repoSave%?}
+    done
 done 
      ;;
      9)
      clear
      echo ""
-     #Create Array
-     echo "Please enter your remote github.com repository ROOT (Just the word: For https://github.com/OurROM/ type: OurROM)"
-     read repo
-     echo "Please Enter the Subequent Directories to the location of your git repository"
-     echo "Again, just the words: For https://github.com/OurROM/frameworks/base type: frameworks base"
+#     #Create Array
+#     echo "Please enter your remote github.com repository ROOT (Just the word: For https://github.com/OurROM/ type: OurROM)"
+#     read repo
+#     echo "Please Enter the Subequent Directories to the location of your git repository"
+#     echo "Again, just the words: For https://github.com/OurROM/frameworks/base type: frameworks base"
      # -a makes read command to read into an array
-     read -a repodir
+#     read -a repodir
      # get number of elements in the array
-     elements=${#repodir[@]}
-     repoSave="${repo}/"
-     index=0
+#     elements=${#repodir[@]}
+#     repoSave="${repo}/"
+#     index=0
 
-while [ "$index" -lt "$elements" ] ; do
+#while [ "$index" -lt "$elements" ] ; do
          # append values from $gitdir until you are done
-    repoSave="${repoSave}${repodir[$index]}_"
-    (( index++ ))
-    repoPath=${repoSave%?}
-done 
+#    repoSave="${repoSave}${repodir[$index]}_"
+#    (( index++ ))
+#    repoPath=${repoSave%?}
+#done 
      ;;
+
      0)
      echo ""
      echo "All Done"
