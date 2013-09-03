@@ -15,7 +15,7 @@ else
 	PRODUCT_PROPERTY_OVERRIDES += \
 	    ro.goo.developerid=OurROM \
 	    ro.goo.rom=$(TARGET_PRODUCT) \
-	    ro.goo.version=347 \
+	    ro.goo.version=406 \
 	    ro.aokp.version=$(TARGET_PRODUCT)_OurROM_$(DATE)
 endif
 

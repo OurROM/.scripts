@@ -69,7 +69,7 @@ case $choice in
      clear
      echo "Pushing your Commit..."
                                     # * Change if Required
-     git push git@github.com:OurROM/platform_manifest.git HEAD:jb-mr1
+     git push git@github.com:OurROM/platform_manifest.git HEAD:jb-mr2
      wait
      echo ""
      echo "$commit - has been pushed to OurROM"
@@ -78,7 +78,7 @@ case $choice in
      ;;
      5)
      clear
-     git reset --hard HEAD && git clean -f && git checkout origin/jb-mr1
+     git reset --hard HEAD && git clean -f && git checkout origin/jb-mr2
      wait
      echo ""
      echo "platform_manifest has been RESET"
@@ -87,7 +87,7 @@ case $choice in
      ;;
      6)
      clear
-     git merge origin/jb-mr1
+     git merge origin/jb-mr2
      wait
      echo ""
      echo "Local Directory is Merged with Online Data"
@@ -112,7 +112,9 @@ case $choice in
      clear
      echo ""
      echo "Git Pull"
-     git pull ourrom jb-mr1   
+     git pull origin jb-mr2   
+     echo "Pulled"
+     read -p "Press [Enter] key to continue..."
      ;;
      9)
      clear

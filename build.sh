@@ -17,7 +17,7 @@ if [[ ! "$params" == *--noinc* ]]; then
 	./incMakeFile.sh
 fi
 
-cp ~/aokp_jb/.scripts/common_versions.mk ~/aokp_jb/vendor/aokp/configs/common_versions.mk
+# cp ~/aokp_jb/.scripts/common_versions.mk ~/aokp_jb/vendor/aokp/configs/common_versions.mk
 
 echo "----------common_versions.mk Copied----------"
 
