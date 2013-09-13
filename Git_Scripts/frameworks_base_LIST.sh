@@ -7,7 +7,7 @@
 clear
 
        # * Change if Required
-cd ~/OurROM/frameworks/base
+cd ~/OurROM_4.3/frameworks/base
 wait
 
 
@@ -46,7 +46,7 @@ case $choice in
      2)
      clear
      echo "Deleting all Hidden files"
-     find ~/OurROM/ -iname "*.*~" -type f -exec rm {} \;
+     find ~/OurROM_4.3/ -iname "*.*~" -type f -exec rm {} \;
      wait
      echo "All HIDDEN files Deleted"
      git add --all && git add . && git add -u
@@ -70,10 +70,10 @@ case $choice in
      echo "Pushing your Commit..."
 
                                     # * Change if Required
-     git push git@github.com:OurROM/frameworks_base.git HEAD:jb-mr1
+     git push git@github.com:OurROM/frameworks_base.git HEAD:jb-mr2
      wait
      echo ""
-     echo "$commit - has been pushed to OurROM"
+     echo "$commit - has been pushed to OurROM_4.3"
      echo ""
      read -p "Press [Enter] key to continue..."
      ;;
@@ -88,7 +88,7 @@ case $choice in
      ;;
      6)
      clear
-     git merge origin/jb-mr1
+     git merge origin/jb-mr2
      wait
      echo ""
      echo "Local Directory is Merged with Online Data"
@@ -113,7 +113,7 @@ case $choice in
      clear
      echo ""
      echo "Git Pull"
-     git pull ourrom jb-mr1   
+     git pull OurROM_4.3 jb-mr2   
      ;;
      9)
      clear

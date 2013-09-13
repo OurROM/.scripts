@@ -3,16 +3,19 @@
 # This script can be modified to allow for any directory
 # Be sure to change all Directory References. References will be proceded in the line above by a *
 
+
 clear
 
        # * Change if Required
-cd ~/OurROM_4.3/build
+cd ~/OurROM_4.3/Built_ROMs
 wait
+
+
 
 while true; do
 clear
                                # * Change if Required
-echo "What would you like to do with build?"
+echo "What would you like to do with Built_ROMs?"
 echo "1.  Enter Commit Message"
 echo "2.  Add All Changes"
 echo "3.  Commit All Changes"
@@ -66,25 +69,24 @@ case $choice in
      clear
      echo "Pushing your Commit..."
                                     # * Change if Required
-     git push git@github.com:OurROM/build.git HEAD:jb-mr2
+     git push git@github.com:OurROM/Built_ROMs.git HEAD:master
      wait
      echo ""
-     echo "$commit - has been pushed to OurROM_4.3"
+     echo "$commit - has been pushed to OurROM"
      echo ""
      read -p "Press [Enter] key to continue..."
      ;;
      5)
      clear
-     git reset --hard HEAD && git clean -f && git checkout origin/jb-mr2
+     git reset --hard HEAD && git clean -f && git checkout origin/master
      wait
      echo ""
-     echo ".scripts has been RESET"
+     echo "Built_ROMs has been RESET"
      echo ""
      read -p "Press [Enter] key to continue..."
      ;;
      6)
      clear
-      
      git merge origin/jb-mr2
      wait
      echo ""
@@ -110,7 +112,9 @@ case $choice in
      clear
      echo ""
      echo "Git Pull"
-     git pull OurROM_4.3 jb-mr2   
+     git pull origin jb-mr2   
+     echo "Pulled"
+     read -p "Press [Enter] key to continue..."
      ;;
      9)
      clear

@@ -3,16 +3,19 @@
 # This script can be modified to allow for any directory
 # Be sure to change all Directory References. References will be proceded in the line above by a *
 
+
 clear
 
        # * Change if Required
-cd ~/OurROM_4.3/build
+cd ~/OurROM/frameworks/base
 wait
+
+
 
 while true; do
 clear
                                # * Change if Required
-echo "What would you like to do with build?"
+echo "What would you like to do with frameworks_base?"
 echo "1.  Enter Commit Message"
 echo "2.  Add All Changes"
 echo "3.  Commit All Changes"
@@ -43,7 +46,7 @@ case $choice in
      2)
      clear
      echo "Deleting all Hidden files"
-     find ~/OurROM_4.3/ -iname "*.*~" -type f -exec rm {} \;
+     find ~/OurROM/ -iname "*.*~" -type f -exec rm {} \;
      wait
      echo "All HIDDEN files Deleted"
      git add --all && git add . && git add -u
@@ -65,27 +68,27 @@ case $choice in
      4)
      clear
      echo "Pushing your Commit..."
+
                                     # * Change if Required
-     git push git@github.com:OurROM/build.git HEAD:jb-mr2
+     git push git@github.com:OurROM/frameworks_base.git HEAD:jb-mr1
      wait
      echo ""
-     echo "$commit - has been pushed to OurROM_4.3"
+     echo "$commit - has been pushed to OurROM"
      echo ""
      read -p "Press [Enter] key to continue..."
      ;;
      5)
      clear
-     git reset --hard HEAD && git clean -f && git checkout origin/jb-mr2
+     git reset --hard HEAD && git clean -f && git checkout FETCH_HEAD
      wait
      echo ""
-     echo ".scripts has been RESET"
+     echo "Frameworks_Base has been RESET"
      echo ""
      read -p "Press [Enter] key to continue..."
      ;;
      6)
      clear
-      
-     git merge origin/jb-mr2
+     git merge origin/jb-mr1
      wait
      echo ""
      echo "Local Directory is Merged with Online Data"
@@ -106,11 +109,11 @@ case $choice in
          done
      echo ""
      ;;
-     8)
+    8)
      clear
      echo ""
      echo "Git Pull"
-     git pull OurROM_4.3 jb-mr2   
+     git pull ourrom jb-mr1   
      ;;
      9)
      clear
