@@ -7,7 +7,7 @@
 clear
 
        # * Change if Required
-cd ~/OurROM_4.3_4.3/packages/apps/ROMControl
+cd ~/OurROM_4.3/packages/apps/RomControl
 wait
 
 

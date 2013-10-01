@@ -112,9 +112,7 @@ case $choice in
      clear
      echo ""
      echo "Git Pull"
-     git pull origin jb-mr2
-     echo "" 
-     read -p "Press [Enter] key to continue..."   
+     git pull ourrom jb-mr2   
      ;;
      9)
      clear

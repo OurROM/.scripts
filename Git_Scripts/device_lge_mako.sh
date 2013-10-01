@@ -3,16 +3,19 @@
 # This script can be modified to allow for any directory
 # Be sure to change all Directory References. References will be proceded in the line above by a *
 
+
 clear
 
        # * Change if Required
-cd ~/OurROM_4.3/build
+cd ~/OurROM_4.3/device/lge/mako
 wait
+
+
 
 while true; do
 clear
                                # * Change if Required
-echo "What would you like to do with build?"
+echo "What would you like to do with device_lge_mako?"
 echo "1.  Enter Commit Message"
 echo "2.  Add All Changes"
 echo "3.  Commit All Changes"
@@ -66,7 +69,7 @@ case $choice in
      clear
      echo "Pushing your Commit..."
                                     # * Change if Required
-     git push git@github.com:OurROM/build.git HEAD:jb-mr2
+     git push git@github.com:OurROM/device_lge_mako.git HEAD:jb-mr2
      wait
      echo ""
      echo "$commit - has been pushed to OurROM_4.3"
@@ -78,13 +81,12 @@ case $choice in
      git reset --hard HEAD && git clean -f && git checkout origin/jb-mr2
      wait
      echo ""
-     echo "build has been RESET"
+     echo "device_lge_mako has been RESET"
      echo ""
      read -p "Press [Enter] key to continue..."
      ;;
      6)
      clear
-      
      git merge origin/jb-mr2
      wait
      echo ""
@@ -106,13 +108,11 @@ case $choice in
          done
      echo ""
      ;;
-     8)
+    8)
      clear
      echo ""
      echo "Git Pull"
-     git pull
-     echo "" 
-     read -p "Press [Enter] key to continue..."   
+     git pull OurROM jb-mr2   
      ;;
      9)
      clear
