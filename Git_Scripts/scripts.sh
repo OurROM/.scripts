@@ -7,7 +7,7 @@
 clear
 
        # * Change if Required
-cd ~/OurROM/.scripts
+cd ~/OurROM_4.3/.scripts
 wait
 
 
@@ -45,8 +45,8 @@ case $choice in
      ;;
      2)
      clear
-     echo "Deleting all Hidden files"
-     find ~/OurROM/ -iname "*.*~" -type f -exec rm {} \;
+     echo "Deleting all Temporary files"
+     find ~/OurROM_4.3/ -iname "*.*~" -type f -exec rm {} \;
      wait
      echo "All HIDDEN files Deleted"
      git add --all && git add . && git add -u
