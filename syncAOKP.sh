@@ -8,7 +8,7 @@ PATH=~/bin:$PATH
 echo "*******************SYNC STARTED******************************** "
 echo " "
 startSyncTime=$(date +%r)
-repo sync -j24
+repo sync
 wait
 sleep 2
 endSyncTime=$(date +%r)
