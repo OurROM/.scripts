@@ -12,7 +12,7 @@ wait
 
 cd ~/Desktop/Latest_Builds/mako/
 mmd5=$(echo aokp_mako_OurROM*.zip)
-mv ~/aokp_jb/.scripts/MAKOmd5s.txt ~/Desktop/Latest_Builds/mako/$mmd5.md5
+mv ~/aokp_kk/.scripts/MAKOmd5s.txt ~/Desktop/Latest_Builds/mako/$mmd5.md5
 
 # Upload to Goo.im
 wait

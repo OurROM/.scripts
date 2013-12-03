@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/aokp_jb/
+cd ~/aokp_kk/
 make clobber
 wait
 exit

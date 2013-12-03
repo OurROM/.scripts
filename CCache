@@ -1,1 +1,1 @@
-watch -n1 -d ~/aokp_jb/prebuilts/misc/linux-x86/ccache/ccache -s
+watch -n1 -d ~/aokp_kk/prebuilts/misc/linux-x86/ccache/ccache -s

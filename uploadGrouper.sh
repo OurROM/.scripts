@@ -13,7 +13,7 @@ wait
 
 cd /home/thebytesmasher/Desktop/Latest_Builds/grouper/
 gmd5=$(echo aokp_grouper_OurROM*.zip)
-mv ~/aokp_jb/.scripts/GROUPERmd5s.txt ~/Desktop/Latest_Builds/grouper/$gmd5.md5
+mv ~/aokp_kk/.scripts/GROUPERmd5s.txt ~/Desktop/Latest_Builds/grouper/$gmd5.md5
 
 # Upload to Goo.im
 wait

@@ -5,7 +5,7 @@ file=$(echo UNOFFICIAL_aokp_manta_OurROM*.zip)
 rm $file
 rm $file.md5
 
-cd ~/aokp_jb
+cd ~/aokp_kk
 # PATH=~/bin:$PATH
 # make clobber
 
@@ -20,7 +20,7 @@ echo " "
 echo "Build Time: $startBuildTimeM"
 echo "Finished: $endBuildTimeM"
 
-cd ~/aokp_jb/out/target/product/manta/
+cd ~/aokp_kk/out/target/product/manta/
 file=$(echo UNOFFICIAL_aokp_manta_OurROM*.zip)
 cp $file /home/thebytesmasher/Desktop/Latest_Builds/manta/
 wait
@@ -29,6 +29,6 @@ wait
 md5sum ~/Desktop/Latest_Builds/manta/UNOFFICIAL_aokp_manta_OurROM*.zip | cut -d' ' -f 1 | cat >> MAKOmd5s.txt
 cd ~/Desktop/Latest_Builds/manta/
 mmd5=$(echo UNOFFICIAL_aokp_manta_OurROM*.zip)
-mv ~/aokp_jb/.scripts/MAKOmd5s.txt /home/thebytesmasher/Desktop/Latest_Buildsmanta/$mmd5.md5
+mv ~/aokp_kk/.scripts/MAKOmd5s.txt /home/thebytesmasher/Desktop/Latest_Buildsmanta/$mmd5.md5
 echo " "
 echo " "

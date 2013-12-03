@@ -12,7 +12,7 @@ wait
 
 cd ~/Desktop/Latest_Builds/tilapia/
 tlmd5=$(echo aokp_tilapia_OurROM*.zip)
-mv ~/aokp_jb/.scripts/TILAPIAmd5s.txt ~/Desktop/Latest_Builds/tilapia/$tlmd5.md5
+mv ~/aokp_kk/.scripts/TILAPIAmd5s.txt ~/Desktop/Latest_Builds/tilapia/$tlmd5.md5
 
 # Upload to Goo.im
 wait

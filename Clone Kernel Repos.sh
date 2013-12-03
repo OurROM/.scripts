@@ -1,16 +1,16 @@
 #! /bin/bash
-cd ~/aokp_jb
+cd ~/aokp_kk
 PATH=~/bin:$PATH
 
 startSyncTime=$(date +%r)
-cd ~/aokp_jb/kernel/lge/mako/
+cd ~/aokp_kk/kernel/lge/mako/
 git clone https://github.com/faux123/mako.git ./
 wait
 
 git checkout origin/enhanced_stock
 wait
 
-cd ~/aokp_jb/kernel/asus/grouper/
+cd ~/aokp_kk/kernel/asus/grouper/
 git clone https://github.com/faux123/Nexus-grouper.git ./
 wait
 
@@ -23,7 +23,7 @@ echo "Kernel Repos Synced"
 echo "Sync Started: $startSyncTime"
 echo "Sync Finished: $endSyncTime"
 
-cd ~/aokp_jb
+cd ~/aokp_kk
 PATH=~/bin:$PATH
 make clobber
 wait
@@ -42,11 +42,11 @@ echo " "
 echo "Build Time: $startBuildTime"
 echo "Finished: $endBuildTime"
 
-cd ~/aokp_jb/out/target/product/grouper/
+cd ~/aokp_kk/out/target/product/grouper/
 file=$(echo aokp_grouper_unofficial*.zip)
 cp $file ~/Dropbox/ROMs/N7
 
-cd ~/aokp_jb
+cd ~/aokp_kk
 PATH=~/bin:$PATH
 make clobber
 wait
@@ -66,7 +66,7 @@ echo " "
 echo "Build Time: $startBuildTime"
 echo "Finished: $endBuildTime"
 
-cd ~/aokp_jb/out/target/product/mako/
+cd ~/aokp_kk/out/target/product/mako/
 file=$(echo aokp_mako_unofficial*.zip)
 cp $file ~/Dropbox/ROMs/N4/
 

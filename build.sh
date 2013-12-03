@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export USE_CCACHE=1 && export CCACHE_DIR=/home/thebytesmasher/.ccache && ~/aokp_jb/prebuilts/misc/linux-x86/ccache/ccache -M 30G
+export USE_CCACHE=1 && export CCACHE_DIR=/home/thebytesmasher/.ccache && ~/aokp_kk/prebuilts/misc/linux-x86/ccache/ccache -M 30G
 
-cd ~/aokp_jb/.scripts
+cd ~/aokp_kk/.scripts
 date +"%r" | cut -d':' -f1,2 | cat > md5s.txt
 
 for i in $*;

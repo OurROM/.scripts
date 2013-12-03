@@ -5,7 +5,7 @@ file=$(echo aokp_grouper_OurROM*.zip)
 rm $file
 rm $file.md5
 
-cd ~/aokp_jb
+cd ~/aokp_kk
 # PATH=~/bin:$PATH
 # make clobber
 
@@ -20,7 +20,7 @@ echo " "
 echo "Build Time: $startBuildTimeG"
 echo "Finished: $endBuildTimeG"
 
-cd ~/aokp_jb/out/target/product/grouper/
+cd ~/aokp_kk/out/target/product/grouper/
 file=$(echo aokp_grouper_OurROM*.zip)
 cp $file /home/thebytesmasher/Desktop/Latest_Builds/grouper/
 

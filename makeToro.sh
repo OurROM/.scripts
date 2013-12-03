@@ -5,7 +5,7 @@ file=$(echo aokp_toro_OurROM*.zip)
 rm $file
 rm $file.md5
 
-cd ~/aokp_jb/
+cd ~/aokp_kk/
 # PATH=~/bin:$PATH
 # make clobber
 
@@ -20,7 +20,7 @@ echo " "
 echo "Build Time: $startBuildTimeT"
 echo "Finished: $endBuildTimeT"
 
-cd ~/aokp_jb/out/target/product/toro/
+cd ~/aokp_kk/out/target/product/toro/
 file=$(echo aokp_toro_OurROM*.zip)
 cp $file /home/thebytesmasher/Desktop/Latest_Builds/toro/
 
@@ -29,6 +29,6 @@ wait
 md5sum ~/Desktop/Latest_Builds/toro/aokp_toro_OurROM*.zip | cut -d' ' -f 1 | cat >> TOROmd5s.txt
 cd /home/thebytesmasher/Desktop/Latest_Builds/toro/
 tomd5=$(echo aokp_toro_OurROM*.zip)
-mv ~/aokp_jb/.scripts/TOROmd5s.txt /home/thebytesmasher/Desktop/Latest_Builds/toro/$tomd5.md5
+mv ~/aokp_kk/.scripts/TOROmd5s.txt /home/thebytesmasher/Desktop/Latest_Builds/toro/$tomd5.md5
 echo " "
 echo " "

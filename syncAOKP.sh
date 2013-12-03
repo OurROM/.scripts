@@ -1,7 +1,7 @@
 #! /bin/bash
 
 date +"%r" | cut -d':' -f1,2 | cat > md5s.txt
-cd ~/aokp_jb
+cd ~/aokp_kk
 PATH=~/bin:$PATH
 #make clobber
 

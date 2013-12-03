@@ -2,7 +2,7 @@
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_UTC_DATE=$(shell date +"%s")
 
 DATE = $(shell vendor/aokp/tools/getdate)
-AOKP_BRANCH=jb-mr1
+AOKP_BRANCH=kitkat
 
 ifneq ($(AOKP_BUILD),)
 	# AOKP_BUILD=<goo version int>/<build string>
@@ -10,13 +10,13 @@ ifneq ($(AOKP_BUILD),)
 	    ro.goo.developerid=OurROM \
 	    ro.goo.rom=OurROM \
 	    ro.goo.version=$(shell echo $(AOKP_BUILD) | cut -d/ -f1) \
-	    ro.aokp.version=$(TARGET_PRODUCT)_jb_$(shell echo $(AOKP_BUILD) | cut -d/ -f2)
+	    ro.aokp.version=$(TARGET_PRODUCT)_OurROM_4.4_$(DATE)
 else
 	PRODUCT_PROPERTY_OVERRIDES += \
 	    ro.goo.developerid=OurROM \
 	    ro.goo.rom=$(TARGET_PRODUCT) \
-	    ro.goo.version=406 \
-	    ro.aokp.version=$(TARGET_PRODUCT)_OurROM_$(DATE)
+	    ro.goo.version=1 \
+	    ro.aokp.version=$(TARGET_PRODUCT)_OurROM_4.4_$(DATE)
 endif
 
 ifeq ($(BUILD_NUMBER),)
@@ -29,7 +29,7 @@ ifeq ($(BUILD_NUMBER),)
   # If no BUILD_NUMBER is set, create a useful "I am an engineering build
   # from this date/time" value.  Make it start with a non-digit so that
   # anyone trying to parse it as an integer will probably get "0".
-  BUILD_NUMBER := OurROM.$(shell date +%Y%m%d.%H%M%S)
+  BUILD_NUMBER := OurROM_$(shell echo $(AOKP_BUILD) | cut -d/ -f2)
 endif
 
 # needed for statistics

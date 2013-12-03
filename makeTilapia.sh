@@ -5,7 +5,7 @@ file=$(echo aokp_tilapia_OurROM*.zip)
 rm $file
 rm $file.md5
 
-cd ~/aokp_jb/
+cd ~/aokp_kk/
 # PATH=~/bin:$PATH
 # make clobber
 
@@ -20,7 +20,7 @@ echo " "
 echo "Build Time: $startBuildTimeT"
 echo "Finished: $endBuildTimeT"
 
-cd ~/aokp_jb/out/target/product/tilapia/
+cd ~/aokp_kk/out/target/product/tilapia/
 file=$(echo aokp_tilapia_OurROM*.zip)
 cp $file /home/thebytesmasher/Desktop/Latest_Builds/tilapia/
 
@@ -29,6 +29,6 @@ wait
 md5sum ~/Desktop/Latest_Builds/tilapia/aokp_tilapia_OurROM*.zip | cut -d' ' -f 1 | cat >> TILAPIAmd5s.txt
 cd /home/thebytesmasher/Desktop/Latest_Builds/tilapia/
 tlmd5=$(echo aokp_tilapia_OurROM*.zip)
-mv ~/aokp_jb/.scripts/TILAPIAmd5s.txt /home/thebytesmasher/Desktop/Latest_Builds/tilapia/$tlmd5.md5
+mv ~/aokp_kk/.scripts/TILAPIAmd5s.txt /home/thebytesmasher/Desktop/Latest_Builds/tilapia/$tlmd5.md5
 echo " "
 echo " "

@@ -2,7 +2,7 @@
 
 echo "Mms: Allow contact via SMS on number longpress in conversation"
 echo "************************************************"
-cd ~/aokp_jb/packages/apps/Mms
+cd ~/aokp_kk/packages/apps/Mms
 git fetch http://gerrit.aokp.co/AOKP/packages_apps_Mms refs/changes/91/9291/1 && git cherry-pick FETCH_HEAD
 wait
 echo ""

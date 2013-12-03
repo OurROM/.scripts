@@ -12,7 +12,7 @@ wait
 
 cd ~/Desktop/Latest_Builds/toro/
 tomd5=$(echo aokp_toro_OurROM*.zip)
-mv ~/aokp_jb/.scripts/TOROmd5s.txt ~/Desktop/Latest_Builds/toro/$tomd5.md5
+mv ~/aokp_kk/.scripts/TOROmd5s.txt ~/Desktop/Latest_Builds/toro/$tomd5.md5
 
 # Upload to Goo.im
 wait

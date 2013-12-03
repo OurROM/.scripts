@@ -5,7 +5,7 @@ file=$(echo aokp_mako_OurROM*.zip)
 rm $file
 rm $file.md5
 
-cd ~/aokp_jb
+cd ~/aokp_kk
 # PATH=~/bin:$PATH
 # make clobber
 
@@ -20,7 +20,7 @@ echo " "
 echo "Build Time: $startBuildTimeM"
 echo "Finished: $endBuildTimeM"
 
-cd ~/aokp_jb/out/target/product/mako/
+cd ~/aokp_kk/out/target/product/mako/
 file=$(echo aokp_mako_OurROM*.zip)
 cp $file /home/thebytesmasher/Desktop/Latest_Builds/mako/
 wait
@@ -29,6 +29,6 @@ wait
 md5sum ~/Desktop/Latest_Builds/mako/aokp_mako_OurROM*.zip | cut -d' ' -f 1 | cat >> MAKOmd5s.txt
 cd ~/Desktop/Latest_Builds/mako/
 mmd5=$(echo aokp_mako_OurROM*.zip)
-mv ~/aokp_jb/.scripts/MAKOmd5s.txt /home/thebytesmasher/Desktop/Latest_Buildsmako/$mmd5.md5
+mv ~/aokp_kk/.scripts/MAKOmd5s.txt /home/thebytesmasher/Desktop/Latest_Buildsmako/$mmd5.md5
 echo " "
 echo " "
