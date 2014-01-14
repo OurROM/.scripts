@@ -12,7 +12,7 @@ cd ~/aokp_kk
 #export USE_CCACHE=1 && export CCACHE_DIR=/home/thebytesmasher/.ccache && prebuilts/misc/linux-x86/ccache/ccache -M 30G
 
 startBuildTimeM=$(date +%r)
-. build/envsetup.sh && time brunch mako aokp_mako-userdebug -j12
+. build/envsetup.sh && time brunch mako aokp_mako-userdebug -j16 > MakoLog.txt
 wait
 endBuildTimeM=$(date +%r)
 
