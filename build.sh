@@ -27,7 +27,9 @@ startBuildTimeM=$(date +%r)
 if [[ ! "$params" == *--nomako* ]]; then
 	wait
 	./makeMako.sh
-	if [[ ! "$params" == *--noupload* ]]; then
+        wait
+	notify-send -t 600000 -u critical -a MAKO 'Build Complete'
+        if [[ ! "$params" == *--noupload* ]]; then
 		wait
 		./uploadMako.sh &
 		wait
@@ -40,6 +42,8 @@ startBuildTimeG=$(date +%r)
 
 if [[ ! "$params" == *--nogrouper* ]]; then
 	./makeGrouper.sh
+        wait
+	notify-send -t 600000 -u critical -a GROUPER 'Build Complete'
 	if [[ ! "$params" == *--noupload* ]]; then
 		wait
 		./uploadGrouper.sh &

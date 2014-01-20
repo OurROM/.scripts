@@ -6,10 +6,6 @@ rm $file
 rm $file.md5
 
 cd ~/aokp_kk
-# PATH=~/bin:$PATH
-# make clobber
-
-# export USE_CCACHE=1 && export CCACHE_DIR=/home/thebytesmasher/.ccache && prebuilts/misc/linux-x86/ccache/ccache -M 30G
 
 startBuildTimeG=$(date +%r)
 . build/envsetup.sh && time brunch grouper aokp_grouper-userdebug -j12

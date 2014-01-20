@@ -6,13 +6,9 @@ rm $file
 rm $file.md5
 
 cd ~/aokp_kk
-# PATH=~/bin:$PATH
-# make clobber
-
-#export USE_CCACHE=1 && export CCACHE_DIR=/home/thebytesmasher/.ccache && prebuilts/misc/linux-x86/ccache/ccache -M 30G
 
 startBuildTimeM=$(date +%r)
-. build/envsetup.sh && time brunch mako aokp_mako-userdebug > log.txt -j20
+. build/envsetup.sh && time brunch mako aokp_mako-userdebug -j20
 wait
 endBuildTimeM=$(date +%r)
 
