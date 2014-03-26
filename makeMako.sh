@@ -7,6 +7,7 @@ rm $file.md5
 
 cd ~/aokp_kk
 
+export USE_CCACHE=1
 startBuildTimeM=$(date +%r)
 . build/envsetup.sh && time brunch mako aokp_mako-userdebug -j20
 wait

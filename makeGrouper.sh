@@ -7,6 +7,7 @@ rm $file.md5
 
 cd ~/aokp_kk
 
+export USE_CCACHE=1
 startBuildTimeG=$(date +%r)
 . build/envsetup.sh && time brunch grouper aokp_grouper-userdebug -j12
 wait

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# export USE_CCACHE=1 && export CCACHE_DIR=/home/thebytesmasher/.ccache && ~/aokp_kk/prebuilts/misc/linux-x86/ccache/ccache -M 22G
+
 cd ~/aokp_kk/.scripts
 date +"%r" | cut -d':' -f1,2 | cat > md5s.txt
 
