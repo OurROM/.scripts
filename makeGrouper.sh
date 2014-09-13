@@ -18,13 +18,13 @@ echo "Build Time: $startBuildTimeG"
 echo "Finished: $endBuildTimeG"
 
 cd ~/aokp_kk/out/target/product/grouper/
-file=$(echo aokp_grouper_OurROM*.zip)
-cp $file /home/thebytesmasher/Desktop/Latest_Builds/grouper/
+file=$(1.aokp_grouper_OurROM_$(date).zip)
+cp .zip /home/thebytesmasher/Desktop/Latest_Builds/grouper/$file
 
 
 #Make MD5
 wait
-md5sum ~/Desktop/Latest_Builds/grouper/aokp_grouper_OurROM*.zip | cut -d' ' -f 1 | cat >> GROUPERmd5s.txt
+md5sum ~/Desktop/Latest_Builds/grouper/$file | cut -d' ' -f 1 | cat >> GROUPERmd5s.txt
 cd ~/Desktop/Latest_Builds/grouper/
 gmd5=$(echo aokp_grouper_OurROM*.zip)
 mv ~/Desktop/Latest_Builds/grouper/ ~/Desktop/Latest_Builds/grouper/$gmd5.md5
