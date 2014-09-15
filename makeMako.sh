@@ -18,8 +18,8 @@ echo "Build Time: $startBuildTimeM"
 echo "Finished: $endBuildTimeM"
 
 cd ~/aokp_kk/out/target/product/mako/
-file=$(1.aokp_mako_OurROM_$(date).zip)
-cp .zip /home/thebytesmasher/Desktop/Latest_Builds/mako/$file
+file=$"1.aokp_mako_OurROM_"
+cp *unofficial_*.zip /home/thebytesmasher/Desktop/Latest_Builds/mako/${file}_$(date +"%m-%d-%y").zip
 wait
 
 #Make MD5s
