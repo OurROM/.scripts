@@ -18,7 +18,7 @@ echo "Build Time: $startBuildTimeM"
 echo "Finished: $endBuildTimeM"
 
 cd ~/aokp_kk/out/target/product/mako/
-file=$"1.aokp_mako_OurROM_"
+file=$"1.aokp_mako_OurROM"
 cp *unofficial_*.zip /home/thebytesmasher/Desktop/Latest_Builds/mako/${file}_$(date +"%m-%d-%y").zip
 wait
 

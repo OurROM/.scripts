@@ -18,7 +18,7 @@ echo "Build Time: $startBuildTimeG"
 echo "Finished: $endBuildTimeG"
 
 cd ~/aokp_kk/out/target/product/grouper/
-file=$"1.aokp_grouper_OurROM_"
+file=$"1.aokp_grouper_OurROM"
 cp *unofficial_*.zip /home/thebytesmasher/Desktop/Latest_Builds/grouper/${file}_$(date +"%m-%d-%y").zip
 
 
